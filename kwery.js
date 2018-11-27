@@ -38,7 +38,7 @@ $k.ajax = function (options) {
   const xhr = new XMLHttpRequest();
 
   if (options.method === "GET") {
-    options.url += `?${Object.toQueryString(options.data)}`;
+    options.url += `${toQueryString(options.data)}`;
   }
 
   xhr.open(options.method, options.url);
@@ -53,11 +53,16 @@ $k.ajax = function (options) {
   xhr.send(JSON.stringify(options.data));
 };
 
-window.$k = $k;
+const toQueryString = (obj) => {
+  let queryString = "?";
+  for (let i = 0; i < Object.keys(obj).length; i++) {
+    const key = Object.keys(obj)[i];
+    const data = obj[key];
+    queryString += `${key}=${data}&`;
+  }
+  if (queryString.length > 1)
+    return queryString.slice(0, queryString.length-1);
+  else return "";
+};
 
-window.$k( () => {
-  let li = window.$k('.starter');
-  li.on("click", () => {
-    window.$k.ajax();
-  });
-});
+module.exports = $k;
