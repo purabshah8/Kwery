@@ -36,11 +36,9 @@ const $divContainers = $k('div.container');
 ### Create DOMNodeCollection
 ```js
 // create a new DOMNodeCollection Object
-const $newDiv = $k('<div></div>');
-
-// append newly created object as a child of $oldDiv
-const $oldDiv = $k('#some-div');
-$oldDiv[0].append($newDiv);
+const $someDiv = $k('#some-div');
+// append new div as a child of $someDiv
+$someDiv.append('<div class="new-div"></div>');
 ```
 
 ### Traverse & Modify DOM Nodes
