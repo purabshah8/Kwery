@@ -105,4 +105,4 @@ updateUser(modifiedUser).then(
 
 ## Example
 
-An example using the kwery library can be found here
+[NASA Data Explorer](https://purabshah8.github.io/NASA-data-explorer/), a website that explores some of NASA's APIs, built using kwery.
