@@ -73,13 +73,13 @@ Remove the html of all nodes in the array AND remove all nodes in the array.
 ### Event Handling
 ```js
 // the on function for DOMNodeCollection objects invokes the callback passed to it when the event occurs
-$("#item-1").on('click', () => (alert('added to cart!')));
+$k("#item-1").on('click', () => (alert('added to cart!')));
 
 // the off function removes the eventListener for the DOMNodeCollection object
-$("#item-1").off('click', () => (alert('added to cart!')));
+$k("#item-1").off('click', () => (alert('added to cart!')));
 
 // this is a special event handler, the callback occurs when the DOM is loaded on the webpage
-$(() => (console.log('Hello World!')));
+$k(() => (console.log('Hello World!')));
 ```
 
 ### AJAX Requests
